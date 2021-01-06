@@ -8,7 +8,7 @@
 
 <h3 align="center">Des screenshot arrivent bientôt !</h3>
 
-## Features
+## Fonctionnalité
 
 * 🔒 Gérez vos comptes un maximum !
   * Ajouter plusieurs comptes et passer facilement de l'un à l'autre.
@@ -35,7 +35,7 @@ We reserve the right to update these conditions at any time, please check back p
 
 ---
 
-### See you ingame.
+### Nous espérons vous revoir bientôt !
 
 
 [nodejs]: https://nodejs.org/en/ 'Node.js'
