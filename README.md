@@ -2,7 +2,7 @@
 
 <h1 align="center">Altozia Launcher</h1>
 
-<em><h5 align="center">(sur base de Electron/Helios Launcher)</h5></em>
+<em><h5 align="center">(sur base de Electron/Helios Launcher) (de Daniel Scalzi - https://github.com/dscalzi)</h5></em>
 
 <p align="center">Join modded servers without worrying about installing Java, Forge, or other mods. We'll handle that for you.</p>
 
