@@ -8,7 +8,7 @@
 
 <h3 align="center">Des screenshot arrivent bientôt !</h3>
 
-## Fonctionnalité
+## Fonctionnalités
 
 * 🔒 Gérez vos comptes un maximum !
   * Ajouter plusieurs comptes et passer facilement de l'un à l'autre.
@@ -22,18 +22,6 @@
 * 📰 Posts et mise à jour intégré dans le launcher.
 * ⚙️ Gestion intuitive des paramètres, y compris un panneau de contrôle Java.
 
-### Note on Third-Party Usage
-
-You may use this software in your own project so long as the following conditions are met.
-
-* Credit is expressly given to the original authors (Daniel Scalzi).
-  * Include a link to the original source on the launcher's About page.
-  * Credit the authors and provide a link to the original source in any publications or download pages.
-* The source code remain **public** as a fork of this repository.
-
-We reserve the right to update these conditions at any time, please check back periodically.
-
----
 
 ### Nous espérons vous revoir bientôt !
 
