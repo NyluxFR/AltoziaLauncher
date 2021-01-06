@@ -7,8 +7,6 @@
 <p align="center">Join modded servers without worrying about installing Java, Forge, or other mods. We'll handle that for you.</p>
 
 <h3 align="center">Des screenshot arrivent bientôt !</h3>
--m ![Screenshot 1]()
--m ![Screenshot 2]()
 
 ## Features
 
@@ -49,3 +47,4 @@ We reserve the right to update these conditions at any time, please check back p
 [wiki]: https://github.com/dscalzi/HeliosLauncher/wiki 'wiki'
 [nebula]: https://github.com/dscalzi/Nebula 'dscalzi/Nebula'
 [v2branch]: https://github.com/dscalzi/HeliosLauncher/tree/ts-refactor 'v2 branch'
+![]()
