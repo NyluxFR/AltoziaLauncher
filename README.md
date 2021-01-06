@@ -6,9 +6,9 @@
 
 <p align="center">Join modded servers without worrying about installing Java, Forge, or other mods. We'll handle that for you.</p>
 
-Des screenshot arrivent bientôt !
-/*![Screenshot 1]()
-![Screenshot 2]()*/
+<h3 align="center">Des screenshot arrivent bientôt !</h3>
+-m ![Screenshot 1]()
+-m ![Screenshot 2]()
 
 ## Features
 
