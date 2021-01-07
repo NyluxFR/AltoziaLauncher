@@ -6,7 +6,7 @@ const logger = require('./loggerutil')('%c[ConfigManager]', 'color: #a02d2a; fon
 
 const sysRoot = process.env.APPDATA || (process.platform == 'darwin' ? process.env.HOME + '/Library/Application Support' : process.env.HOME)
 // TODO change
-const dataPath = path.join(sysRoot, '.helioslauncher')
+const dataPath = path.join(sysRoot, '.altoziaLauncher')
 
 // Forked processes do not have access to electron, so we have this workaround.
 const launcherDir = process.env.CONFIG_DIRECT_PATH || require('electron').remote.app.getPath('userData')
@@ -83,10 +83,10 @@ const DEFAULT_CONFIG = {
             ],
         },
         game: {
-            resWidth: 1280,
-            resHeight: 720,
-            fullscreen: false,
-            autoConnect: true,
+            resWidth: 1920,
+            resHeight: 1080,
+            fullscreen: true,
+            autoConnect: false,
             launchDetached: true
         },
         launcher: {

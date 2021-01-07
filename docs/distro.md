@@ -9,23 +9,23 @@ The distribution index is written in JSON. The general format of the index is as
     "version": "1.0.0",
     "discord": {
         "clientId": "12334567890123456789",
-        "smallImageText": "WesterosCraft",
+        "smallImageText": "Altozia",
         "smallImageKey": "seal-circle"
     },
-    "rss": "https://westeroscraft.com/articles/index.rss",
+    "rss": "https://altozia.fr",
     "servers": [
         {
-            "id": "Example_Server",
-            "name": "WesterosCraft Example Client",
-            "description": "Example WesterosCraft server. Connect for fun!",
+            "id": "Altozia-Fac",
+            "name": "Altozia PVP Faction",
+            "description": "Altozia, PVP Faction Moddé!",
             "icon": "http://mc.westeroscraft.com/WesterosCraftLauncher/files/example_icon.png",
             "version": "0.0.1",
-            "address": "mc.westeroscraft.com:1337",
-            "minecraftVersion": "1.11.2",
+            "address": "176.31.35.28:25567",
+            "minecraftVersion": "1.12.2",
             "discord": {
-                "shortId": "Example",
-                "largeImageText": "WesterosCraft Example Server",
-                "largeImageKey": "server-example"
+                "shortId": "Altozia",
+                "largeImageText": "Altozia PVP Faction",
+                "largeImageKey": "Héhé"
             },
             "mainServer": true,
             "autoconnect": true,

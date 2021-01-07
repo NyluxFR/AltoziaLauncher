@@ -225,14 +225,14 @@ const refreshServerStatus = async function(fade = false){
     loggerLanding.log('Refreshing Server Status')
     const serv = DistroManager.getDistribution().getServer(ConfigManager.getSelectedServer())
 
-    let pLabel = 'SERVER'
+    let pLabel = 'SERVEUR'
     let pVal = 'OFFLINE'
 
     try {
         const serverURL = new URL('my://' + serv.getAddress())
         const servStat = await ServerStatus.getStatus(serverURL.hostname, serverURL.port)
         if(servStat.online){
-            pLabel = 'PLAYERS'
+            pLabel = 'JOUEURS'
             pVal = servStat.onlinePlayers + '/' + servStat.maxPlayers
         }
 
@@ -327,10 +327,10 @@ function asyncSystemScan(mcVersion, launchAfter = true){
                 // If the result is null, no valid Java installation was found.
                 // Show this information to the user.
                 setOverlayContent(
-                    'No Compatible<br>Java Installation Found',
-                    'In order to join WesterosCraft, you need a 64-bit installation of Java 8. Would you like us to install a copy? By installing, you accept <a href="http://www.oracle.com/technetwork/java/javase/terms/license/index.html">Oracle\'s license agreement</a>.',
-                    'Install Java',
-                    'Install Manually'
+                    'Pas d\'installation de<br>Java compatible trouvée',
+                    'Pour rejoindre Altozia, vous devez disposer d\'une installation 64 bits de Java 8. Souhaitez-vous que nous en installions une copie ? En installant, vous acceptez <a href="http://www.oracle.com/technetwork/java/javase/terms/license/index.html">le contrat de licence d\'Oracle</a>.',
+                    'Installer Java',
+                    'Installer Manuellement'
                 )
                 setOverlayHandler(() => {
                     setLaunchDetails('Preparing Java Download..')
@@ -542,27 +542,27 @@ function dlAsync(login = true){
                 case 'distribution':
                     setLaunchPercentage(20, 100)
                     loggerLaunchSuite.log('Validated distibution index.')
-                    setLaunchDetails('Loading version information..')
+                    setLaunchDetails('Chargement de la version..')
                     break
                 case 'version':
                     setLaunchPercentage(40, 100)
                     loggerLaunchSuite.log('Version data loaded.')
-                    setLaunchDetails('Validating asset integrity..')
+                    setLaunchDetails('Validation de l\'intégrité des assets..')
                     break
                 case 'assets':
                     setLaunchPercentage(60, 100)
                     loggerLaunchSuite.log('Asset Validation Complete')
-                    setLaunchDetails('Validating library integrity..')
+                    setLaunchDetails('Validation de l\'intégrité des bibliothèques..')
                     break
                 case 'libraries':
                     setLaunchPercentage(80, 100)
                     loggerLaunchSuite.log('Library validation complete.')
-                    setLaunchDetails('Validating miscellaneous file integrity..')
+                    setLaunchDetails('Validation de l\'intégrité de divers fichiers..')
                     break
                 case 'files':
                     setLaunchPercentage(100, 100)
                     loggerLaunchSuite.log('File validation complete.')
-                    setLaunchDetails('Downloading files..')
+                    setLaunchDetails('Fichier en cours de téléchargement..')
                     break
             }
         } else if(m.context === 'progress'){
@@ -614,13 +614,13 @@ function dlAsync(login = true){
                     
                     if(m.error.code === 'ENOENT'){
                         showLaunchFailure(
-                            'Download Error',
-                            'Could not connect to the file server. Ensure that you are connected to the internet and try again.'
+                            'Erreur de téléchargement',
+                            'Impossible de se connecter au serveur de fichiers. Assurez-vous que vous êtes connecté à l\'internet et réessayez.'
                         )
                     } else {
                         showLaunchFailure(
-                            'Download Error',
-                            'Check the console (CTRL + Shift + i) for more details. Please try again.'
+                            'Erreur de téléchargement',
+                            'Vérifiez la console (CTRL + Shift + i) pour plus de détails. Veuillez réessayer.'
                         )
                     }
 
@@ -636,10 +636,10 @@ function dlAsync(login = true){
 
             // If these properties are not defined it's likely an error.
             if(m.result.forgeData == null || m.result.versionData == null){
-                loggerLaunchSuite.error('Error during validation:', m.result)
+                loggerLaunchSuite.error('Erreur lors du lancement:', m.result)
 
-                loggerLaunchSuite.error('Error during launch', m.result.error)
-                showLaunchFailure('Error During Launch', 'Please check the console (CTRL + Shift + i) for more details.')
+                loggerLaunchSuite.error('Erreur lors du lancement', m.result.error)
+                showLaunchFailure('Erreur lors du lancement', 'Vérifiez la console (CTRL + Shift + i) pour plus de détails.')
 
                 allGood = false
             }
@@ -651,7 +651,7 @@ function dlAsync(login = true){
                 const authUser = ConfigManager.getSelectedAccount()
                 loggerLaunchSuite.log(`Sending selected account (${authUser.displayName}) to ProcessBuilder.`)
                 let pb = new ProcessBuilder(serv, versionData, forgeData, authUser, remote.app.getVersion())
-                setLaunchDetails('Launching game..')
+                setLaunchDetails('Lancement du jeu..')
 
                 // const SERVER_JOINED_REGEX = /\[.+\]: \[CHAT\] [a-zA-Z0-9_]{1,16} joined the game/
                 const SERVER_JOINED_REGEX = new RegExp(`\\[.+\\]: \\[CHAT\\] ${authUser.displayName} joined the game`)
@@ -686,9 +686,9 @@ function dlAsync(login = true){
                 const gameStateChange = function(data){
                     data = data.trim()
                     if(SERVER_JOINED_REGEX.test(data)){
-                        DiscordWrapper.updateDetails('Exploring the Realm!')
+                        DiscordWrapper.updateDetails('Explore Realm!')
                     } else if(GAME_JOINED_REGEX.test(data)){
-                        DiscordWrapper.updateDetails('Sailing to Westeros!')
+                        DiscordWrapper.updateDetails('Navigue vers Altozia!')
                     }
                 }
 
@@ -696,7 +696,7 @@ function dlAsync(login = true){
                     data = data.trim()
                     if(data.indexOf('Could not find or load main class net.minecraft.launchwrapper.Launch') > -1){
                         loggerLaunchSuite.error('Game launch failed, LaunchWrapper was not downloaded properly.')
-                        showLaunchFailure('Error During Launch', 'The main file, LaunchWrapper, failed to download properly. As a result, the game cannot launch.<br><br>To fix this issue, temporarily turn off your antivirus software and launch the game again.<br><br>If you have time, please <a href="https://github.com/dscalzi/HeliosLauncher/issues">submit an issue</a> and let us know what antivirus software you use. We\'ll contact them and try to straighten things out.')
+                        showLaunchFailure('Error During Launch', 'The main file, LaunchWrapper, failed to download properly. As a result, the game cannot launch.<br><br>To fix this issue, temporarily turn off your antivirus software and launch the game again.<br><br>If you have time, please <a href="https://github.com/nyluxfr/Altozia/issues">submit an issue</a> and let us know what antivirus software you use. We\'ll contact them and try to straighten things out.')
                     }
                 }
 
@@ -708,7 +708,7 @@ function dlAsync(login = true){
                     proc.stdout.on('data', tempListener)
                     proc.stderr.on('data', gameErrorListener)
 
-                    setLaunchDetails('Done. Enjoy the server!')
+                    setLaunchDetails('C\'est fait. Profitez du serveur!')
 
                     // Init Discord Hook
                     const distro = DistroManager.getDistribution()
@@ -867,7 +867,7 @@ let newsLoadingListener = null
  */
 function setNewsLoading(val){
     if(val){
-        const nLStr = 'Checking for News'
+        const nLStr = 'Recherche de News'
         let dotStr = '..'
         nELoadSpan.innerHTML = nLStr + dotStr
         newsLoadingListener = setInterval(() => {

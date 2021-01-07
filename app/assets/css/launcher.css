@@ -2955,6 +2955,14 @@ input:checked + .toggleSwitchSlider:before {
     fill: #1b8dd4;
 }
 
+#twitchSVG:hover,
+#twitchURL:focus #twitchSVG {
+    fill: #9147FF;
+}
+#twitchSVG:active {
+    fill: #9147FF;
+}
+
 /* Instagram icon colors. */
 #instagramSVG:hover,
 #instagramURL:focus #instagramSVG {
