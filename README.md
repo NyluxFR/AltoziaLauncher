@@ -6,7 +6,9 @@
 [<p align="center"><img src="https://img.shields.io/travis/dscalzi/HeliosLauncher.svg?style=for-the-badge" alt="travis">](https://travis-ci.org/NyluxFR/AltoziaLauncher)</p>
 
 <p align="center">Rejoignez Altozia sans problème de mods ou autres!</p>
+
 ![Screenshot 1](https://i.imgur.com/bZmDeh0.png)
+![Screenshot 2](https://i.imgur.com/yEkLUDT.png)
 
 ## Fonctionnalités
 
