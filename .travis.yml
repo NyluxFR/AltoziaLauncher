@@ -61,4 +61,10 @@
       }
     ]
   }
+  deploy:
+  provider: releases
+  api_key: "210788fd56039081d282d78b1da21820264d3728"
+  skip_cleanup: true
+  on:
+    tags: true
 }
