@@ -3,7 +3,7 @@
 <h1 align="center">Altozia Launcher</h1>
 
 <em><h5 align="center">(sur base de Electron/Helios Launcher) (de Daniel Scalzi - https://github.com/dscalzi)</h5></em>
-[<p align="center"><img src="https://img.shields.io/travis/dscalzi/HeliosLauncher.svg?style=for-the-badge" alt="travis">](https://travis-ci.org/NyluxFR/AltoziaLauncher)</p>
+[<p align="center"><img src="https://img.shields.io/travis/dscalzi/HeliosLauncher.svg?style=for-the-badge" alt="travis">](https://travis-ci.com/NyluxFR/AltoziaLauncher)</p>
 
 <p align="center">Rejoignez Altozia sans problème de mods ou autres!</p>
 
